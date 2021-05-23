@@ -1,3 +1,7 @@
+@import 'css/theme.css';
+@import 'css/layout.css';
+@import 'css/modules.css';
+
 body{
     margin: 0px;
     font-family: sans-serif;
@@ -24,56 +28,19 @@ nav .links{
     height: 100vh;
 }
 
-@media screen and (min-width: 1000px){
-    nav .links{
-        flex-direction: row;
-        width: auto;
-        position: static;
-        padding-top: 0px;
-        height: auto;
-    }
-}
-
 nav .home{
     text-decoration: none;
     font-size: 2em;
 }
 
-.primaryScheme, .primaryScheme .home, .primaryScheme .links, .primaryScheme .links a{
-    transition: all 0.2s;
-    background-color: snow;
-    color: darkslategrey;
-}
-
-.secondaryScheme, .secondaryScheme .home, .secondaryScheme .links, .secondaryScheme .links a{
-    transition: all 0.2s;
-    background-color: #76a137;
-    color: snow;
-}
-
-.primaryScheme svg{
-    stroke: darkslategrey;
-    fill: darkslategrey;
-}
-
-.secondaryScheme svg{
-    stroke: snow;
-    fill: snow;
-}
 
 nav .links a{
     text-decoration: none;
     padding: 8px;
+    padding-top: 16px;
+    padding-bottom: 16px;
     transition: background-color 0.12s;
-}
-
-nav.secondaryScheme .links a:hover{
-    background-color: snow;
-    color: #76a137;
-}
-nav.primaryScheme .links a:hover{
-    background-color: darkslategrey;
-    color: snow;
+    font-size: 1.5em;
 }
 
 .closedMenu{
@@ -108,3 +75,24 @@ svg{
     }
 }
 
+@media screen and (min-width: 1000px){
+    nav .links{
+        flex-direction: row;
+        width: auto;
+        position: static;
+        padding-top: 0px;
+        height: auto;
+        padding: 12px;
+        margin-right: 12px
+    }
+
+    nav .links a{
+        border-radius: 4px;
+        margin: 4px;
+        padding: 8px;
+    }
+
+    svg{
+        display: none;
+    }
+}
