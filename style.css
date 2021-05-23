@@ -16,7 +16,9 @@ nav .links{
     display: flex;
     flex-direction: column;
     width: 65%;
-    top: 61px;
+    top: 0px;
+    padding-top: 55px;
+    z-index: -1;
     margin-left: auto;
     position: absolute;
     height: 100vh;
@@ -28,11 +30,13 @@ nav .home{
 }
 
 .primaryScheme, .primaryScheme .home, .primaryScheme .links, .primaryScheme .links a{
+    transition: all 0.2s;
     background-color: snow;
     color: darkslategrey;
 }
 
 .secondaryScheme, .secondaryScheme .home, .secondaryScheme .links, .secondaryScheme .links a{
+    transition: all 0.2s;
     background-color: #76a137;
     color: snow;
 }

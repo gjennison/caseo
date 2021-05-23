@@ -7,6 +7,12 @@ let cross = document.querySelector('.close')
 hamburger.addEventListener('click', openMenu)
 cross.addEventListener('click', closeMenu)
 
+window.addEventListener('load', (e) => {
+    let height = nav.style.height
+    menu.style.top = height.toString() + "px"
+    console.log(height)
+})
+
 function openMenu(){
     menu.style.animation = "openMenuAnimation 0.5s"
 
