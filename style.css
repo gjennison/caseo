@@ -1,0 +1,95 @@
+body{
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+nav{
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+nav .links{
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    top: 61px;
+    margin-left: auto;
+    position: absolute;
+    height: 100vh;
+}
+
+nav .home{
+    text-decoration: none;
+    font-size: 2em;
+}
+
+.primaryScheme, .primaryScheme .home, .primaryScheme .links, .primaryScheme .links a{
+    background-color: snow;
+    color: darkslategrey;
+}
+
+.secondaryScheme, .secondaryScheme .home, .secondaryScheme .links, .secondaryScheme .links a{
+    background-color: #76a137;
+    color: snow;
+}
+
+.primaryScheme svg{
+    stroke: darkslategrey;
+    fill: darkslategrey;
+}
+
+.secondaryScheme svg{
+    stroke: snow;
+    fill: snow;
+}
+
+nav .links a{
+    text-decoration: none;
+    padding: 8px;
+    transition: background-color 0.12s;
+}
+
+nav.secondaryScheme .links a:hover{
+    background-color: snow;
+    color: #76a137;
+}
+nav.primaryScheme .links a:hover{
+    background-color: darkslategrey;
+    color: snow;
+}
+
+.closedMenu{
+    right: -65%;
+}
+
+.openMenu{
+    right: 0%;
+}
+
+svg{
+    cursor: pointer;
+    margin-right: 24px;
+}
+
+
+@keyframes openMenuAnimation {
+    0%{
+        right: -65%;
+    }
+    100%{
+        right: 0%;
+    }
+}
+
+@keyframes closeMenuAnimation {
+    0%{
+        right: 0%;
+    }
+    100%{
+        right: -65%;
+    }
+}
