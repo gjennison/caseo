@@ -34,11 +34,11 @@ function closeMenu(){
 }
 
 document.addEventListener('scroll', function(e) {
-    if(window.scrollY >= 50){
+    if(window.scrollY >= 100){
         nav.classList.add('secondaryScheme')
         nav.classList.remove('primaryScheme')
     }
-    if(window.scrollY < 50){
+    if(window.scrollY < 100){
         nav.classList.add('primaryScheme')
         nav.classList.remove('secondaryScheme')
     }
