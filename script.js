@@ -10,7 +10,6 @@ cross.addEventListener('click', closeMenu)
 window.addEventListener('load', (e) => {
     let height = nav.style.height
     menu.style.top = height.toString() + "px"
-    console.log(height)
 })
 
 function openMenu(){
@@ -18,9 +17,12 @@ function openMenu(){
 
     menu.classList.remove('closedMenu')
     menu.classList.add('openMenu')
+    
+    hamburger.classList.add('hideSVG')
+    hamburger.classList.remove('displaySVG')
+    cross.classList.add('displaySVG')
+    cross.classList.remove('hideSVG')
 
-    hamburger.style.display = "none"
-    cross.style.display = "block"
 }
 
 function closeMenu(){
@@ -29,8 +31,11 @@ function closeMenu(){
     menu.classList.remove('openMenu')
     menu.classList.add('closedMenu')
 
-    hamburger.style.display = "block"
-    cross.style.display = "none"
+    hamburger.classList.remove('hideSVG')
+    hamburger.classList.add('displaySVG')
+    cross.classList.remove('displaySVG')
+    cross.classList.add('hideSVG')
+
 }
 
 document.addEventListener('scroll', function(e) {
